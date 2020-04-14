@@ -1,0 +1,41 @@
+Vagrant mvn issue:
+https://github.com/hashicorp/vagrant/issues/8234
+https://github.com/hashicorp/vagrant/issues/4060
+
+To overcome the maven Internet connect issue in the Vagrant box, I am using a different Vagrant box downloaded into:
+/home/ahmad/github/innen
+pulled from Vagrant Hub: innen/ubuntu-18.04-jdk8
+
+To install storm into the innen box:
+https://www.tutorialspoint.com/apache_storm/apache_storm_installation.htm
+
+GitHub repo for the course: https://github.com/udacity/ud381
+
+/opt/apache-zookeeper-3.6.0-bin/data
+
+Content of /opt/apache-storm-2.1.0/conf/storm.yaml:
+storm.zookeeper.servers:
+ - "localhost"
+storm.zookeeper.port: 2181
+storm.local.dir: "/opt/apache-storm-0.9.2-incubating/data"
+nimbus.host: "localhost"
+ui.port: 8181
+supervisor.slots.ports:
+ - 6700
+ - 6701
+ - 6702
+ - 6703
+
+ Storm UI: http://localhost:8181
+
+Find a process that uses a port and kill it:
+https://www.baeldung.com/tomcat-bind-exception
+
+Purge Maven local repo:
+mvn dependency:purge-local-repository
+
+Install Redis:
+sudo apt-get install redis-server
+
+Connect VSCode to the vagrant box:
+https://medium.com/@lopezgand/connect-visual-studio-code-with-vagrant-in-your-local-machine-24903fb4a9de
